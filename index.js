@@ -25,6 +25,7 @@ app.get('/roll-dice', (req, res) => {
 
 // Route to demonstrate CORS failure
 app.get('/no-cors', (req, res) => {
+  // Do not allow CORS for this route
   res.json({ message: 'This route has no CORS' });
 });
 
