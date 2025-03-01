@@ -21,7 +21,7 @@ app.get('/no-cors', (req, res) => {
   res.json({ message: 'This route has no CORS' });
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
