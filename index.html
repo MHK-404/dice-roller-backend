@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dice Roller API Test</title>
+</head>
+<body>
+  <h1>Dice Roller API Test</h1>
+  <button onclick="wakeUp()">Wake Up Server</button>
+  <button onclick="rollDice()">Roll Dice</button>
+  <p id="result"></p>
+  <script>
+    async function wakeUp() {
+      const response = await fetch('/wake-up');
+      const data = await response.json();
+      document.getElementById('result').innerText = data.message;
+    }
+
+    async function rollDice() {
+      const response = await fetch('/roll-dice');
+      const data = await response.json();
+      document.getElementById('result').innerText = `You rolled a ${data.result}`;
+    }
+  </script>
+</body>
+</html>
