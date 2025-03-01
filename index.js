@@ -4,7 +4,7 @@ const app = express();
 
 // Enable CORS for the frontend domain
 app.use(cors({
-  origin: 'https://green-smoke-0e27ad900.6.szurestaticapps.net' // Allow requests from the frontend
+  origin: 'https://green-smoke-0e27ad900.6.azurestaticapps.net' // Allow requests from the frontend
 }));
 
 // Root route
